@@ -1,0 +1,36 @@
+{
+  "name": "my-plugin",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "tsc": "tsc -p tsconfig.json",
+    "tsc:watch": "tsc -p tsconfig.json --watch",
+    "dev": "npx webpack --mode=development --watch",
+    "copy": "mkdir -p build && cp ./manifest.json ./build/manifest.json && cp ./dist/ui.html ./build/ui.html && cp ./dist/code.js ./build/code.js",
+    "build": "npx webpack-cli --mode=production && npm run copy",
+    "zip": "npm run build && zip -r build.zip build"
+  },
+  "author": "",
+  "license": "",
+  "browserslist": [
+    "last 1 Chrome versions"
+  ],
+  "devDependencies": {
+    "@figma/plugin-typings": "^1.23.0",
+    "css-loader": "^5.2.7",
+    "file-loader": "^6.2.0",
+    "html-webpack-inline-source-plugin": "^1.0.0-beta.2",
+    "html-webpack-plugin": "^4.3.0",
+    "sass": "^1.43.4",
+    "sass-loader": "^10",
+    "style-loader": "^2.0.0",
+    "ts-loader": "^8.0.0",
+    "typescript": "^4.2.4",
+    "url-loader": "^4.1.1",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^4.9.1"
+  },
+  "dependencies": {
+    "lit": "^2.2.0"
+  }
+}

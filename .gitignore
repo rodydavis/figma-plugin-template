@@ -1,0 +1,6 @@
+lib
+build
+dist
+*.zip
+node_modules
+test.html
