@@ -1,3 +1,5 @@
 # Figma Plugin Template
 
-Figma plugin template
+- Lit
+- Typescript
+- Webpack
